@@ -37,3 +37,17 @@
 ## 結論
 
 通過。網站可進入正式發布流程。
+
+## 公開部署驗證
+
+- 公開網址：`https://prayer168.github.io/wild-survive/`
+- GitHub Pages 建置狀態：`built`
+- 公開首頁：HTTP 200，標題與主要教材內容正確。
+- 公開 CSS：HTTP 200，MIME 為 `text/css`。
+- 公開 Image 2.0 主圖：HTTP 200，MIME 為 `image/webp`。
+- 公開社群預覽圖：HTTP 200，MIME 為 `image/png`。
+- 公開雙語貼文檔：HTTP 200，MIME 為 `text/plain`。
+- 公開版所有延遲載入圖片成功，桌機 1440×1000 與手機 390×844 無水平溢出。
+- 公開版 Open Graph 圖片網址、1200×630 尺寸欄位與 `summary_large_image` Twitter Card 均正確。
+
+最終結論：公開網站、社群預覽與雙語 Facebook 貼文均通過發布閘門。
