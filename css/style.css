@@ -7,7 +7,7 @@
   --sage: #a9b49c;
   --amber: #d69743;
   --amber-light: #f0c57f;
-  --danger: #b85b3d;
+  --danger: #873a29;
   --ink: #18211d;
   --muted: #5e6963;
   --paper: #f4f0e7;
@@ -108,7 +108,8 @@ h1, h2, h3 { line-height: 1.18; }
 .checklist-card, .essentials-card { padding: clamp(28px, 4vw, 48px); border-radius: var(--radius); }
 .checklist-card { color: var(--ink); background: var(--paper); }
 .essentials-card { background: var(--pine-800); border: 1px solid rgba(255,255,255,.1); }
-.card-label { margin-bottom: 14px; color: var(--amber); }
+.card-label { margin-bottom: 14px; color: #70450b; }
+.essentials-card .card-label, .care-box .card-label, .universal-rule .card-label, .report-card .card-label { color: var(--amber-light); }
 .checklist-card h3, .essentials-card h3, .stop-panel h3 { font-family: "Noto Serif TC", "PMingLiU", serif; font-size: clamp(28px, 3vw, 42px); }
 .line-list { list-style: none; margin: 34px 0 0; padding: 0; }
 .line-list li { padding: 17px 0; display: grid; grid-template-columns: 70px 1fr; gap: 16px; border-top: 1px solid var(--line); color: var(--muted); }
@@ -118,7 +119,7 @@ h1, h2, h3 { line-height: 1.18; }
 .essentials-list span:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.16); }
 .essentials-list span:nth-child(even) { padding-left: 20px; }
 .fine-print { color: var(--muted); font-size: 12px; line-height: 1.65; }
-.section-dark .fine-print { color: rgba(255,255,255,.5); }
+.section-dark .fine-print { color: rgba(255,255,255,.7); }
 .stop-panel { margin-top: 22px; padding: clamp(30px, 5vw, 58px); display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; background: var(--amber-light); color: var(--pine-950); border-radius: var(--radius); }
 .stop-intro p:last-child { color: rgba(13,32,27,.7); }
 .stop-steps { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid rgba(13,32,27,.2); border-left: 1px solid rgba(13,32,27,.2); }
@@ -220,6 +221,7 @@ h1, h2, h3 { line-height: 1.18; }
 .report-card li span { color: var(--amber-light); font-family: Georgia, serif; }
 .signal-card { background: rgba(255,255,255,.42); }
 .signal-card h3 { font-family: "Noto Serif TC", "PMingLiU", serif; font-size: 30px; }
+.signal-card .fine-print { color: #47524c; }
 
 .supplement-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .supplement-grid article { min-height: 240px; padding: 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
