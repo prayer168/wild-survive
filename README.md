@@ -45,6 +45,5 @@ wild_survive/
 
 ## 部署
 
-- Repository：部署後回填
-- GitHub Pages：部署後回填
-
+- Repository：https://github.com/prayer168/wild_survive
+- GitHub Pages：https://prayer168.github.io/wild_survive/
