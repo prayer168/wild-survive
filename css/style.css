@@ -121,7 +121,7 @@ h1, h2, h3 { line-height: 1.18; }
 .section-dark .fine-print { color: rgba(255,255,255,.5); }
 .stop-panel { margin-top: 22px; padding: clamp(30px, 5vw, 58px); display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; background: var(--amber-light); color: var(--pine-950); border-radius: var(--radius); }
 .stop-intro p:last-child { color: rgba(13,32,27,.7); }
-.stop-steps { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid rgba(13,32,27,.2); border-left: 1px solid rgba(13,32,27,.2); }
+.stop-steps { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid rgba(13,32,27,.2); border-left: 1px solid rgba(13,32,27,.2); }
 .stop-steps > div { padding: 22px; display: grid; grid-template-columns: 45px 1fr; gap: 12px; border-right: 1px solid rgba(13,32,27,.2); border-bottom: 1px solid rgba(13,32,27,.2); }
 .stop-steps strong { font-family: Georgia, serif; font-size: 40px; font-weight: 400; }
 .stop-steps span, .stop-steps b { display: block; }
@@ -139,6 +139,11 @@ h1, h2, h3 { line-height: 1.18; }
 .chapter-content h2 em { color: var(--danger); font-style: normal; }
 .lead { margin-bottom: 34px; color: var(--muted); font-size: 17px; }
 .lead strong { color: var(--ink); }
+.inline-visual { margin: 0 0 28px; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.58); box-shadow: 0 14px 38px rgba(13,32,27,.08); }
+.inline-visual img { width: 100%; height: auto; display: block; aspect-ratio: 3 / 2; object-fit: cover; }
+.inline-visual figcaption { padding: 14px 18px 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; line-height: 1.65; }
+.stop-visual { margin: 0; border-color: rgba(13,32,27,.2); background: rgba(255,255,255,.24); box-shadow: none; }
+.stop-visual figcaption { border-top-color: rgba(13,32,27,.2); color: rgba(13,32,27,.72); }
 .knowledge-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .knowledge-grid article, .navigation-methods article { padding: 26px; border: 1px solid var(--line); background: rgba(255,255,255,.45); border-radius: 18px; }
 .knowledge-grid h3, .navigation-methods h3, .layers h3, .animal-grid h3, .supplement-grid h3 { margin: 14px 0 9px; font-size: 18px; }
@@ -190,6 +195,9 @@ h1, h2, h3 { line-height: 1.18; }
 .section-wildlife { color: white; background: var(--pine-900); }
 .wildlife-feature { display: grid; grid-template-columns: 1.05fr .95fr; overflow: hidden; border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius); background: var(--pine-800); }
 .wildlife-feature img { width: 100%; height: 100%; max-height: 520px; object-fit: cover; }
+.wildlife-visual { margin: 22px 0 0; }
+.inline-visual-dark { border-color: rgba(255,255,255,.12); background: rgba(255,255,255,.04); box-shadow: none; }
+.inline-visual-dark figcaption { border-top-color: rgba(255,255,255,.12); color: rgba(255,255,255,.68); }
 .universal-rule { padding: clamp(30px, 5vw, 56px); }
 .universal-rule h3 { margin-bottom: 24px; font-family: "Noto Serif TC", "PMingLiU", serif; font-size: clamp(30px, 3vw, 44px); }
 .universal-rule ul { margin: 0; padding-left: 20px; color: rgba(255,255,255,.7); }

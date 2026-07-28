@@ -11,7 +11,7 @@
 - 以臺灣常見情境與官方資料為主，搭配國際權威機構資料交叉查核。
 - 把「預防、停下、定位、求援」放在鑽木取火或野外覓食之前。
 - 明確標示不可做的危險迷思，例如試吃不明植物、飲用未處理溪水、任意生火、被蛇咬後切開吸毒。
-- 全站章節圖片由 Image 2.0 生成，未抓取網路照片。
+- 全站 14 張教材圖片由 Image 2.0 生成，未抓取網路照片；七個重點段落另有無文字情境圖與原文圖說。
 - 純 HTML/CSS，無測驗、動畫、追蹤器或學習進度儲存。
 - 支援手機、平板、桌機與列印。
 
@@ -33,6 +33,7 @@ wild_survive/
 ├─ css/style.css
 ├─ assets/images/
 ├─ docs/references.md
+├─ docs/image-generation.md
 ├─ docs/teacher-guide.md
 ├─ docs/test-report.md
 ├─ project.config.json

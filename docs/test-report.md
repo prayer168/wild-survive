@@ -12,7 +12,9 @@
 ## 檢查結果
 
 - [x] HTML 可載入且有完整語意內容，共 13 個主要區塊。
-- [x] 7 張教材圖片與 1 張社群預覽圖皆能載入；教材圖片具有替代文字且只使用專案相對路徑。
+- [x] 14 張教材圖片與 1 張社群預覽圖皆能載入；教材圖片具有替代文字且只使用專案相對路徑。
+- [x] 七個重點段落均新增一張 1536×1024 無文字 Image 2.0 情境圖，原有文字卡完整保留並附圖說。
+- [x] 新增圖片以 WebP 呈現，桌機顯示比例為 3:2，沒有被 HTML 原始尺寸拉長。
 - [x] 桌機版 1440px 沒有水平溢出；主視覺、文字與導覽未遮擋。
 - [x] 平板版 768px 沒有水平溢出；導覽與主視覺正常顯示。
 - [x] 手機版 390px 沒有水平溢出；章節圖完整、卡片改為單欄。
@@ -32,6 +34,15 @@
 - `tablet-check.png`：平板首頁
 - `mobile-top.png`：手機首頁
 - `mobile-section.png`：手機章節銜接
+- `qa-stop.jpg`：STOP 情境圖與原文字卡（桌機）
+- `qa-plants.jpg`：有毒植物情境圖與原文字卡（桌機）
+- `qa-fire.jpg`：營火結構情境圖與原文字卡（桌機）
+- `qa-water.jpg`：水處理步驟情境圖與原文字卡（桌機）
+- `qa-navigation.jpg`：導航工具情境圖與原文字卡（桌機）
+- `qa-warmth.jpg`：分層禦寒情境圖與原文字卡（桌機）
+- `qa-wildlife.jpg`：六格動物安全情境與原文字卡（桌機）
+- `qa-tablet-water.jpg`：水處理段落（平板）
+- `qa-mobile-wildlife.jpg`、`qa-mobile-stop.jpg`：動物與 STOP 段落（手機）
 - `assets/images/social-preview.png`：Facebook／社群連結預覽圖
 
 ## 結論
