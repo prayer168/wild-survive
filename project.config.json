@@ -2,14 +2,14 @@
   "title": "野外求生安全手冊",
   "englishTitle": "Wild Survival Learning Lab",
   "projectName": "wild_survive",
-  "repositoryName": "wild_survive",
-  "repositoryNameSource": "folder",
-  "version": "1.0.0",
+  "repositoryName": "wild-survive",
+  "repositoryNameSource": "user",
+  "version": "1.0.1",
   "language": "zh-TW",
   "audience": "國小五年級至國中低年級與一般初學者",
   "mode": "純閱讀型網站",
   "imagePolicy": "All editorial images generated with Image 2.0",
   "checkedAt": "2026-07-28",
-  "repositoryUrl": "https://github.com/prayer168/wild_survive",
-  "pagesUrl": "https://prayer168.github.io/wild_survive/"
+  "repositoryUrl": "https://github.com/prayer168/wild-survive",
+  "pagesUrl": "https://prayer168.github.io/wild-survive/"
 }

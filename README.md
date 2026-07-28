@@ -45,5 +45,5 @@ wild_survive/
 
 ## 部署
 
-- Repository：https://github.com/prayer168/wild_survive
-- GitHub Pages：https://prayer168.github.io/wild_survive/
+- Repository：https://github.com/prayer168/wild-survive
+- GitHub Pages：https://prayer168.github.io/wild-survive/

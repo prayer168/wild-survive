@@ -1,5 +1,3 @@
-# Facebook 中英雙語貼文
-
 【繁體中文】
 
 真正的野外求生，不是逞強挑戰大自然，而是先準備、會判斷，並知道何時停下來求援。
@@ -16,7 +14,7 @@ https://prayer168.github.io/wild-survive/
 
 Wilderness survival is not about overpowering nature. It starts with preparation, sound judgment, and knowing when to stop and call for help.
 
-The *Wilderness Safety Field Guide* is built around outdoor conditions in Taiwan. It covers trip plans and the Ten Essentials, the STOP response for getting lost, poisonous plants, responsible fire use, backcountry water treatment, map-and-compass navigation, hypothermia prevention, and safe responses to bears, macaques, hornets, snakes, and other wildlife. The guide draws on government, national park, public-health, and first-aid sources and is suitable for older elementary students, middle-school learners, families, and outdoor beginners.
+The Wilderness Safety Field Guide is built around outdoor conditions in Taiwan. It covers trip plans and the Ten Essentials, the STOP response for getting lost, poisonous plants, responsible fire use, backcountry water treatment, map-and-compass navigation, hypothermia prevention, and safe responses to bears, macaques, hornets, snakes, and other wildlife. The guide draws on government, national park, public-health, and first-aid sources and is suitable for older elementary students, middle-school learners, families, and outdoor beginners.
 
 The website is a calm, reading-first resource designed for phones, tablets, and computers, with field-guide illustrations created using Image 2.0. Take a look—and make “return home safely” the first goal of every trip.
 
