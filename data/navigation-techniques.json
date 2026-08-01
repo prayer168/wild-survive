@@ -1,0 +1,90 @@
+[
+  {
+    "id": "baseplate-compass",
+    "name": "正式底板指北針",
+    "category": "主要工具",
+    "reliability": "高",
+    "principle": "可自由轉動的磁針會沿地球磁場排列，搭配透明底板可量取方位角並與地圖對齊。",
+    "environment": "多數陸地環境；須在安全、相對水平且遠離干擾物的位置讀值。",
+    "limits": "受磁偏角、附近磁鐵、含鐵金屬與部分電子裝置影響；使用者必須受過訓練。",
+    "safeUse": "出發前檢查功能，搭配紙本地圖並至少重測兩次。",
+    "source": {"name": "台灣山林悠遊網：地圖判讀與目標定位", "url": "https://recreation.forest.gov.tw/Files/RT/Doc/%E5%9C%B0%E5%9C%96%E5%88%A4%E8%AE%80%E8%88%87%E7%9B%AE%E6%A8%99%E5%AE%9A%E4%BD%8D.pdf"}
+  },
+  {
+    "id": "diy-floating-compass",
+    "name": "自製浮水指南針",
+    "category": "科學實驗",
+    "reliability": "低／僅輔助",
+    "principle": "磁化鋼針放在低摩擦的浮材上，可大致沿地磁南北方向排列。",
+    "environment": "室內無風教學桌；用正式指北針比對結果。",
+    "limits": "只能得到概略南北軸，容易受水波、摩擦、金屬與磁化方式影響，無法直接告訴你哪端是北。",
+    "safeUse": "尖針只由成人處理，學生觀察與記錄；不得把它當成野外正式導航工具。",
+    "source": {"name": "國科會臺灣科普環島列車：自製羅盤", "url": "https://web.nstc.gov.tw/pstrain/2022/Home/stationVideoDetail3ceb.html?id=132&station=jijiStation"}
+  },
+  {
+    "id": "map-orientation",
+    "name": "紙圖與指北針定向",
+    "category": "主要工具",
+    "reliability": "高",
+    "principle": "讓地圖北方與實際北方一致，再把地圖符號、等高線與眼前地形逐項核對。",
+    "environment": "有合適比例與現況資料的紙本地形圖，且能找到安全停留處。",
+    "limits": "舊地圖、錯誤磁偏角、把磁針南北端看反或只認一個地標都可能造成誤判。",
+    "safeUse": "每到岔路、地形轉折或固定時間就定位，不等迷路才第一次看圖。",
+    "source": {"name": "U.S. Geological Survey：How To Use a Compass with a USGS Topographic Map", "url": "https://www.usgs.gov/educational-resources/how-use-a-compass-a-usgs-topographic-map"}
+  },
+  {
+    "id": "offline-gps",
+    "name": "離線地圖與 GPS",
+    "category": "電子輔助",
+    "reliability": "高",
+    "principle": "衛星定位可估算座標，離線地圖能在沒有行動網路時顯示位置與預定路線。",
+    "environment": "已預先下載正確區域地圖、裝置有電且天空視野足夠。",
+    "limits": "電池耗盡、裝置損壞、密林或峽谷遮蔽、圖資或基準設定錯誤都會影響結果。",
+    "safeUse": "帶行動電源並保留紙圖與指北針；把座標、海拔、時間與附近地標一起通報。",
+    "source": {"name": "U.S. National Park Service：Ten Essentials", "url": "https://www.nps.gov/articles/10essentials.htm"}
+  },
+  {
+    "id": "terrain-association",
+    "name": "地形與地標交叉比對",
+    "category": "觀察證據",
+    "reliability": "中",
+    "principle": "比較稜線、鞍部、溪谷、道路彎道、建物與等高線形狀，持續確認自己在地圖上的位置。",
+    "environment": "視野可見且地圖上有兩個以上可辨識地形或地標。",
+    "limits": "濃霧、密林、相似稜線、施工改道或季節植被可能遮蔽特徵。",
+    "safeUse": "至少比對兩項獨立證據；若彼此矛盾，就停下重新確認。",
+    "source": {"name": "台灣山林悠遊網：地圖判讀與目標定位", "url": "https://recreation.forest.gov.tw/Files/RT/Doc/%E5%9C%B0%E5%9C%96%E5%88%A4%E8%AE%80%E8%88%87%E7%9B%AE%E6%A8%99%E5%AE%9A%E4%BD%8D.pdf"}
+  },
+  {
+    "id": "sun-shadow",
+    "name": "太陽與日影觀察",
+    "category": "自然線索",
+    "reliability": "低／僅輔助",
+    "principle": "太陽在天空的位置與固定物體影子的變化，可協助建立東西移動的概略概念。",
+    "environment": "晴朗、視野開闊，且有時間進行多次觀察。",
+    "limits": "方向會受時間、季節、緯度、地形與雲層影響；單一時刻的影子不能提供精密位置。",
+    "safeUse": "只用於概念與輔助驗證，不直視太陽，也不取代地圖與指北針。",
+    "source": {"name": "National Geographic Education：Cardinal Directions and Maps", "url": "https://education.nationalgeographic.org/resource/cardinal-directions-and-maps/"}
+  },
+  {
+    "id": "north-star",
+    "name": "北極星概略北向",
+    "category": "自然線索",
+    "reliability": "低／僅輔助",
+    "principle": "在北半球，北極星的位置可作為概略北向參考。",
+    "environment": "晴朗夜間、北方天空可見，且觀察者確實會辨認星群。",
+    "limits": "雲霧、光害、林冠、山壁與辨星錯誤都可能使方法失效；不能提供所在位置。",
+    "safeUse": "只作交叉確認；不要為看星星走向稜線、崖邊或離開原路線。",
+    "source": {"name": "National Geographic Education：Compass", "url": "https://education.nationalgeographic.org/resource/compass/"}
+  },
+  {
+    "id": "moss-myth",
+    "name": "植物、青苔與風向口訣",
+    "category": "常見迷思",
+    "reliability": "低／僅輔助",
+    "principle": "植物分布、濕度與風痕反映局部微環境，不會固定對應某個方向。",
+    "environment": "不應作為決定行進方向的工具。",
+    "limits": "坡向、遮蔭、水氣、樹種與地形都會改變觀察結果。",
+    "safeUse": "把它當自然觀察，不當導航證據；迷途時停止移動並使用正式工具求援。",
+    "source": {"name": "陽明山國家公園：登山安全與急救", "url": "https://www.ymsnp.gov.tw/ch/titlelist/mountaineering-precautions/19"}
+  }
+]

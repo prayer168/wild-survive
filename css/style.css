@@ -324,6 +324,104 @@ a:focus-visible { outline: 3px solid var(--amber-light); outline-offset: 4px; bo
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
 
+/* Compass and navigation learning expansion */
+.compass-lab { margin-top: 64px; padding: clamp(26px, 5vw, 58px); color: var(--ink); background: #f5f2e8; border: 1px solid rgba(20,61,45,.16); border-radius: 30px; box-shadow: var(--shadow); }
+.compass-lab-heading { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr); gap: 28px; align-items: end; }
+.compass-lab-heading h2 { margin: 4px 0 12px; font-size: clamp(34px, 5vw, 62px); }
+.compass-lab-heading p { margin: 0; color: var(--muted); }
+.compass-lab-warning { display: grid; gap: 6px; padding: 20px; color: #fff; background: var(--pine-900); border-left: 6px solid var(--amber-light); border-radius: 16px; }
+.compass-lab-warning span { color: rgba(255,255,255,.8); font-size: 14px; }
+.compass-tabs { display: flex; gap: 8px; margin: 34px 0 0; padding-bottom: 4px; overflow-x: auto; scrollbar-width: thin; }
+.compass-tabs button { min-width: max-content; min-height: 48px; padding: 10px 18px; color: var(--pine-800); background: transparent; border: 1px solid var(--line); border-radius: 999px; font: inherit; font-weight: 900; cursor: pointer; }
+.compass-tabs button[aria-selected="true"] { color: #fff; background: var(--pine-700); border-color: var(--pine-700); }
+.compass-lab button, .compass-lab select, .compass-lab input { font: inherit; }
+.compass-lab button { cursor: pointer; }
+.compass-lab button:focus-visible, .compass-lab select:focus-visible, .compass-lab input:focus-visible { outline: 4px solid rgba(214,151,67,.4); outline-offset: 3px; }
+.compass-panel { padding-top: 34px; }
+.compass-panel[hidden] { display: none; }
+.compass-panel figure { margin: 0; }
+.compass-panel figure img, .clue-cards img { width: 100%; display: block; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 18px; }
+.compass-panel figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; }
+.diy-compass-grid, .interference-grid, .map-orient-grid, .lost-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .8fr); gap: 30px; align-items: start; }
+.diy-stepper, .interference-simulator, .map-orient-simulator, .lost-grid > div { padding: 24px; background: #fff; border-radius: 22px; }
+.diy-stepper h3, .interference-simulator h3, .map-orient-simulator h3, .lost-grid h3 { margin: 5px 0 18px; font-size: 25px; }
+.diy-step-buttons, .interference-options { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+.diy-step-buttons button, .interference-options button, #interference-reset, #map-reset, #lost-step-reset, .clue-form button { min-height: 44px; padding: 9px 12px; color: var(--pine-800); background: #eef2e9; border: 1px solid var(--line); border-radius: 12px; font-weight: 900; }
+.diy-step-buttons button.is-active, .interference-options button.is-active { color: #fff; background: var(--pine-700); }
+.floating-compass { position: relative; min-height: 180px; display: grid; place-items: center; margin: 18px 0; overflow: hidden; background: radial-gradient(circle, #d8f0f4 0 42%, #a9d6dd 43% 62%, #d9c5a0 63%); border-radius: 50%; }
+.water-ripple { position: absolute; width: 42%; aspect-ratio: 1; border: 2px solid rgba(34,96,114,.3); border-radius: 50%; box-shadow: 0 0 0 18px rgba(34,96,114,.08), 0 0 0 36px rgba(34,96,114,.05); }
+.cork-float { position: relative; width: 102px; height: 34px; background: #b77a45; border-radius: 50%; box-shadow: 0 8px 12px rgba(20,61,45,.18); transition: transform .9s ease; }
+.cork-float i { position: absolute; top: 14px; left: -28px; width: 158px; height: 5px; background: linear-gradient(90deg, #34483e 0 48%, #d46442 49% 100%); border-radius: 99px; }
+.floating-compass[data-state="magnetize"] .cork-float { transform: translateY(34px) rotate(34deg); opacity: .68; }
+.floating-compass[data-state="float"] .cork-float { transform: rotate(48deg); }
+.floating-compass[data-state="settle"] .cork-float { animation: compass-settle 1.8s ease-in-out infinite alternate; }
+.floating-compass[data-state="compare"] .cork-float { transform: rotate(0deg); }
+@keyframes compass-settle { from { transform: rotate(-12deg); } to { transform: rotate(12deg); } }
+.compass-safety-strip, .natural-clue-warning { display: grid; grid-template-columns: auto 1fr; gap: 16px; margin-top: 24px; padding: 18px 20px; color: var(--pine-950); background: #f1dfb9; border-radius: 16px; }
+.interference-simulator { text-align: center; }
+.sim-compass { position: relative; width: 180px; aspect-ratio: 1; display: grid; place-items: start center; margin: 10px auto 22px; padding: 10px; color: var(--pine-800); background: radial-gradient(circle, #fff 0 55%, #dae4d8 56% 66%, #7d9a86 67%); border-radius: 50%; box-shadow: inset 0 0 0 2px var(--pine-700); font-weight: 900; }
+.sim-compass i { --needle-angle: 0deg; position: absolute; top: 50%; left: 50%; width: 8px; height: 132px; background: linear-gradient(#d65b3b 0 50%, #334d42 50%); border-radius: 99px; transform: translate(-50%, -50%) rotate(var(--needle-angle)); transition: transform .8s cubic-bezier(.2,.8,.2,1); }
+.magnetic-field-visual { max-width: 880px; margin: 32px auto 0 !important; }
+.map-sheet { --map-angle: 125deg; position: relative; min-height: 250px; margin: 12px 0 20px; overflow: hidden; background: repeating-radial-gradient(ellipse at 44% 50%, transparent 0 19px, rgba(98,114,77,.3) 20px 22px), #e9e0c8; border: 8px solid #fff; border-radius: 16px; box-shadow: 0 8px 28px rgba(20,61,45,.14); transform: rotate(var(--map-angle)) scale(.83); transition: transform .4s ease; }
+.map-sheet.is-aligned { box-shadow: 0 0 0 5px #7db48b, 0 8px 28px rgba(20,61,45,.14); }
+.map-north { position: absolute; top: 12px; left: 50%; color: var(--danger); font-size: 22px; font-weight: 900; transform: translateX(-50%); }
+.map-north::after { content: ''; display: block; width: 0; height: 0; margin: 2px auto; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 34px solid var(--danger); }
+.map-ridge { position: absolute; inset: 42px 28px 68px; border: 5px double #8d774c; border-radius: 50% 40% 55% 35%; transform: rotate(-18deg); }
+.map-stream { position: absolute; top: 30px; left: 30%; width: 8px; height: 210px; background: #5f9fb3; border-radius: 80%; transform: rotate(28deg); }
+.map-orient-simulator input[type="range"] { width: 100%; accent-color: var(--pine-700); }
+.technique-toolbar { display: flex; flex-wrap: wrap; gap: 14px; margin: 30px 0 18px; }
+.technique-toolbar label { display: grid; gap: 6px; color: var(--muted); font-size: 13px; font-weight: 800; }
+.technique-toolbar select { min-height: 44px; padding: 8px 38px 8px 12px; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 10px; }
+.technique-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+.technique-grid article { padding: 22px; background: #fff; border: 1px solid var(--line); border-radius: 18px; }
+.technique-grid h3 { margin: 10px 0; }
+.technique-grid p { color: var(--muted); }
+.technique-meta { display: flex; justify-content: space-between; gap: 12px; color: var(--danger); font-size: 12px; font-weight: 900; }
+.technique-meta b { color: var(--pine-700); }
+.technique-grid dl { display: grid; gap: 10px; margin: 16px 0; }
+.technique-grid dl div { display: grid; grid-template-columns: 64px 1fr; gap: 8px; }
+.technique-grid dt { color: var(--pine-700); font-weight: 900; }
+.technique-grid dd { margin: 0; color: var(--muted); font-size: 13px; }
+.technique-grid a { color: var(--pine-700); font-weight: 900; }
+.natural-clue-warning { margin: 0 0 24px; }
+.clue-cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
+.clue-cards article { overflow: hidden; background: #fff; border-radius: 18px; }
+.clue-cards img { border-radius: 0; }
+.clue-cards h3, .clue-cards p { margin-right: 18px; margin-left: 18px; }
+.clue-cards p { color: var(--muted); font-size: 14px; }
+.clue-form { display: grid; grid-template-columns: 1fr 1fr auto; gap: 12px; align-items: end; margin-top: 24px; padding: 22px; background: #fff; border-radius: 18px; }
+.clue-form label { display: grid; gap: 6px; color: var(--muted); font-size: 13px; font-weight: 800; }
+.clue-form select { min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; }
+.clue-form .interaction-feedback { grid-column: 1 / -1; }
+.lost-step-pool { display: grid; gap: 8px; }
+.lost-step-pool button { min-height: 48px; padding: 10px 14px; text-align: left; color: var(--pine-800); background: #eef2e9; border: 1px solid var(--line); border-radius: 12px; font-weight: 900; }
+.lost-step-order { min-height: 42px; padding-left: 30px; color: var(--pine-800); }
+.lost-step-order li { margin: 7px 0; }
+.emergency-strip { color: #fff; background: var(--pine-900); }
+.resource-filter-label { margin: 18px 0 6px; color: var(--pine-700); font-size: 12px; font-weight: 900; letter-spacing: .1em; }
+.quiz-topic { display: inline-block; margin-left: 10px; padding: 5px 9px; color: var(--pine-950); background: var(--amber-light); border-radius: 999px; letter-spacing: .05em; }
+
+@media (max-width: 900px) {
+  .compass-lab-heading, .diy-compass-grid, .interference-grid, .map-orient-grid, .lost-grid { grid-template-columns: 1fr; }
+  .clue-cards { grid-template-columns: 1fr 1fr; }
+  .clue-form { grid-template-columns: 1fr 1fr; }
+  .clue-form button { grid-column: 1 / -1; }
+}
+
+@media (max-width: 620px) {
+  .compass-lab { margin-right: 14px; margin-left: 14px; padding: 22px 16px; border-radius: 22px; }
+  .compass-tabs { margin-right: -16px; margin-left: -16px; padding-right: 16px; padding-left: 16px; }
+  .diy-step-buttons, .interference-options, .technique-grid, .clue-cards, .clue-form { grid-template-columns: 1fr; }
+  .clue-form button { grid-column: auto; }
+  .compass-safety-strip, .natural-clue-warning { grid-template-columns: 1fr; }
+  .technique-meta { align-items: flex-start; flex-direction: column; }
+  .map-sheet { min-height: 220px; transform: rotate(var(--map-angle)) scale(.72); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cork-float, .sim-compass i, .map-sheet { animation: none !important; transition: none !important; }
+}
+
 @media print {
   .site-header, .hero-actions { display: none; }
   .hero { min-height: 700px; break-after: page; }

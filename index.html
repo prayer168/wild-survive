@@ -451,6 +451,144 @@
           </div>
         </div>
       </div>
+
+      <div class="wrap compass-lab" aria-labelledby="compass-lab-title">
+        <div class="compass-lab-heading">
+          <div>
+            <p class="section-number">INTERACTIVE NAVIGATION LAB</p>
+            <h2 id="compass-lab-title">自製指南針與辨位術</h2>
+            <p>從地磁原理開始，練習把指北針、紙本地圖、離線定位與實際地形交叉確認。</p>
+          </div>
+          <div class="compass-lab-warning" role="note">
+            <strong>自製指南針是科學實驗，不是救命裝備</strong>
+            <span>尖針與磁鐵只限教室內由成人全程監督操作；進入野外仍須攜帶正式指北針與紙本地圖。</span>
+          </div>
+        </div>
+
+        <div class="compass-tabs" role="tablist" aria-label="指南針與辨位術互動教材頁籤">
+          <button type="button" role="tab" id="compass-tab-diy" aria-controls="compass-panel-diy" aria-selected="true" tabindex="0" data-compass-tab="diy">自製指南針</button>
+          <button type="button" role="tab" id="compass-tab-magnet" aria-controls="compass-panel-magnet" aria-selected="false" tabindex="-1" data-compass-tab="magnet">磁力與干擾</button>
+          <button type="button" role="tab" id="compass-tab-map" aria-controls="compass-panel-map" aria-selected="false" tabindex="-1" data-compass-tab="map">地圖定向</button>
+          <button type="button" role="tab" id="compass-tab-clues" aria-controls="compass-panel-clues" aria-selected="false" tabindex="-1" data-compass-tab="clues">自然線索</button>
+          <button type="button" role="tab" id="compass-tab-lost" aria-controls="compass-panel-lost" aria-selected="false" tabindex="-1" data-compass-tab="lost">迷途決策</button>
+        </div>
+
+        <section class="compass-panel" role="tabpanel" id="compass-panel-diy" aria-labelledby="compass-tab-diy" data-compass-panel="diy">
+          <div class="diy-compass-grid">
+            <figure>
+              <img src="assets/images/navigation/diy-compass-materials.png" alt="淺水盤、軟木片、縫衣針、條形磁鐵與正式指北針整齊放在教學桌面上" width="1536" height="1024" loading="lazy">
+              <figcaption>材料只在教室內使用；針具由成人拿取、穿入浮材並於實驗後立即收回。</figcaption>
+            </figure>
+            <div class="diy-stepper">
+              <p class="card-label">安全科學實驗</p>
+              <h3>磁化、漂浮、靜置、比對</h3>
+              <div class="diy-step-buttons" role="group" aria-label="自製指南針實驗步驟">
+                <button type="button" data-diy-step="0" class="is-active">1 磁化</button>
+                <button type="button" data-diy-step="1">2 漂浮</button>
+                <button type="button" data-diy-step="2">3 靜置</button>
+                <button type="button" data-diy-step="3">4 比對</button>
+              </div>
+              <div class="floating-compass" id="floating-compass" aria-label="磁化針目前等待放入水中">
+                <span class="water-ripple" aria-hidden="true"></span>
+                <span class="cork-float" aria-hidden="true"><i></i></span>
+              </div>
+              <p id="diy-step-feedback" class="interaction-feedback" aria-live="polite">由成人用磁鐵沿同一方向摩擦鋼針，使它暫時磁化。</p>
+              <div class="control-row"><button type="button" id="diy-play">依序播放</button><button type="button" id="diy-pause">暫停</button><button type="button" id="diy-reset">重設</button></div>
+            </div>
+          </div>
+          <figure class="magnetic-field-visual">
+            <img src="assets/images/navigation/diy-compass-steps.png" alt="成人依序磁化鋼針、用鉗子固定浮材、讓磁針在靜水漂浮，最後與正式指北針比對" width="1536" height="1024" loading="lazy">
+            <figcaption>四階段都在受控教學場域完成；同一個實驗至少重做數次，觀察結果是否一致。</figcaption>
+          </figure>
+          <div class="compass-safety-strip">
+            <strong>判讀重點</strong>
+            <span>浮針只會排列在大致南北軸上；哪一端是北，必須用已知方向或正式指北針比對後標記，不能只猜針尖。</span>
+          </div>
+        </section>
+
+        <section class="compass-panel" role="tabpanel" id="compass-panel-magnet" aria-labelledby="compass-tab-magnet" data-compass-panel="magnet" hidden>
+          <div class="interference-grid">
+            <figure>
+              <img src="assets/images/navigation/compass-interference.png" alt="正式指北針分別遠離與靠近手機、磁扣、鋼製水瓶時的安全比較情境" width="1536" height="1024" loading="lazy">
+              <figcaption>磁鐵、含鐵金屬、喇叭與部分電子裝置可能讓磁針偏轉。</figcaption>
+            </figure>
+            <div class="interference-simulator">
+              <p class="card-label">干擾模擬</p>
+              <h3>什麼會讓磁針說錯話？</h3>
+              <div class="sim-compass" aria-label="模擬指南針"><span>N</span><i id="sim-compass-needle"></i></div>
+              <div class="interference-options" role="group" aria-label="選擇指南針附近物品">
+                <button type="button" data-interference="clear" class="is-active">淨空桌面</button>
+                <button type="button" data-interference="phone">手機貼近</button>
+                <button type="button" data-interference="steel">鋼瓶貼近</button>
+                <button type="button" data-interference="magnet">磁鐵貼近</button>
+              </div>
+              <p id="interference-feedback" class="interaction-feedback" aria-live="polite">周圍淨空後，磁針可較穩定地指向磁北。</p>
+              <button type="button" id="interference-reset">移除干擾並重測</button>
+            </div>
+          </div>
+          <figure class="magnetic-field-visual">
+            <img src="assets/images/navigation/magnetic-field-compass.png" alt="地球磁場與可自由轉動磁針大致沿南北方向排列的無文字教學圖" width="1536" height="1024" loading="lazy">
+            <figcaption>磁北、真北與地圖格網北可能不同；磁偏角會隨地點與時間改變。</figcaption>
+          </figure>
+        </section>
+
+        <section class="compass-panel" role="tabpanel" id="compass-panel-map" aria-labelledby="compass-tab-map" data-compass-panel="map" hidden>
+          <div class="map-orient-grid">
+            <figure>
+              <img src="assets/images/navigation/orient-map-compass.png" alt="學生在成人指導下把底板指北針放在紙本地形圖上，對齊圖面北方與磁針" width="1536" height="1024" loading="lazy">
+              <figcaption>先在安全處停下，把地圖北方轉向實際北方，再核對稜線、道路與溪谷。</figcaption>
+            </figure>
+            <div class="map-orient-simulator">
+              <p class="card-label">旋轉地圖</p>
+              <h3>讓圖面北方對齊磁北</h3>
+              <div class="map-sheet" id="map-sheet" aria-label="目前地圖尚未對正"><span class="map-north">N</span><span class="map-ridge"></span><span class="map-stream"></span></div>
+              <label for="map-rotation">地圖旋轉角度 <output id="map-angle">125°</output></label>
+              <input id="map-rotation" type="range" min="-180" max="180" value="125" step="5">
+              <p id="map-feedback" class="interaction-feedback" aria-live="polite">慢慢轉動地圖，讓圖面北箭頭與磁針北端平行且同向。</p>
+              <button type="button" id="map-reset">重新練習</button>
+            </div>
+          </div>
+          <div class="technique-toolbar">
+            <label>辨位方法分類
+              <select id="technique-category"><option value="all">全部方法</option></select>
+            </label>
+            <label>可靠度篩選
+              <select id="technique-reliability"><option value="all">全部可靠度</option><option value="高">高</option><option value="中">中</option><option value="低">低／僅輔助</option></select>
+            </label>
+          </div>
+          <div id="technique-grid" class="technique-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="compass-panel" role="tabpanel" id="compass-panel-clues" aria-labelledby="compass-tab-clues" data-compass-panel="clues" hidden>
+          <div class="natural-clue-warning" role="note"><strong>自然線索只能輔助</strong><span>太陽、影子、星空、風與植物都會受時間、季節、地形和天氣影響；不能靠「青苔一定長在北邊」等口訣行進。</span></div>
+          <div class="clue-cards">
+            <article><img src="assets/images/navigation/sun-shadow.png" alt="成人帶學生在空曠安全處不同時間觀察直立短桿影子變化" width="1536" height="1024" loading="lazy"><h3>日影變化</h3><p>固定物體的影子會隨太陽位置改變，可協助建立東西方向概念，但不是精密定位。</p></article>
+            <article><img src="assets/images/navigation/north-star.png" alt="晴朗夜空中以北斗七星附近星群輔助尋找北極星的戶外教學情境" width="1536" height="1024" loading="lazy"><h3>北極星</h3><p>北半球晴朗夜間可作概略北向參考；雲霧、山壁、林冠與辨星錯誤都會限制使用。</p></article>
+            <article><img src="assets/images/navigation/terrain-landmarks.png" alt="登山者把紙圖上的稜線、鞍部、溪谷與道路彎道和實際地形逐項比對" width="1536" height="1024" loading="lazy"><h3>地形地標</h3><p>把稜線、鞍部、溪谷、道路和建物同時核對，比依賴單一自然口訣可靠。</p></article>
+          </div>
+          <form id="clue-form" class="clue-form">
+            <label>情境<select id="clue-scenario"><option value="clear-day">晴朗白天、視野良好</option><option value="cloudy">濃霧陰天、看不到遠方</option><option value="night">晴朗夜晚、可見星空</option><option value="forest">密林中、地標不明</option></select></label>
+            <label>你要採用的證據<select id="clue-evidence"><option value="cross">紙圖＋正式指北針＋已知地標</option><option value="sun">只看太陽</option><option value="moss">只看青苔</option><option value="gps">只看手機 GPS</option></select></label>
+            <button type="submit">判斷可靠度</button>
+            <p id="clue-feedback" class="interaction-feedback" aria-live="polite">選擇情境與證據，看看能否支持安全決策。</p>
+          </form>
+        </section>
+
+        <section class="compass-panel" role="tabpanel" id="compass-panel-lost" aria-labelledby="compass-tab-lost" data-compass-panel="lost" hidden>
+          <div class="lost-grid">
+            <figure><img src="assets/images/navigation/lost-stop-navigation.png" alt="迷途隊伍在安全處停下，由成人查看紙圖、指北針、座標與最後已知位置並準備通報" width="1536" height="1024" loading="lazy"><figcaption>辨位術的第一步常常不是繼續走，而是停止擴大錯誤。</figcaption></figure>
+            <div>
+              <p class="card-label">迷途決策排序</p>
+              <h3>依安全順序點選四個行動</h3>
+              <div id="lost-step-pool" class="lost-step-pool"></div>
+              <ol id="lost-step-order" class="lost-step-order"></ol>
+              <p id="lost-step-feedback" class="interaction-feedback" aria-live="polite">先停下來，避免在不確定方向時越走越遠。</p>
+              <button type="button" id="lost-step-reset">重新排序</button>
+            </div>
+          </div>
+          <div class="compass-safety-strip emergency-strip"><strong>無法確認位置時</strong><span>留在相對安全、可被發現的位置，保暖並節省電力；通知現場成人或管理單位，臺灣緊急救援撥 119。不要為找訊號攀爬岩壁或貿然下切溪谷。</span></div>
+        </section>
+      </div>
     </section>
 
     <section class="section chapter" id="warmth" aria-labelledby="warmth-title">
@@ -629,12 +767,20 @@
         </div>
 
         <div class="resource-group resource-group-fire">
-          <h3>新增｜野外求生與安全生火影音、網站及文章</h3>
-          <p class="resource-note">新增資源查核日期：2026-08-01。先查臺灣所在地規定，再閱讀通用技能內容。</p>
-          <div class="resource-filter" role="group" aria-label="新增自主學習資源篩選">
-            <button type="button" class="is-active" data-resource-filter="all">全部</button>
-            <button type="button" data-resource-filter="官方影音">影音</button>
-            <button type="button" data-resource-filter="article">網站與文章</button>
+          <h3>主題分類｜野外求生、安全生火、指南針與辨位術</h3>
+          <p class="resource-note">擴充資源查核日期：2026-08-01。可同時依主題與資源形式篩選；先查所在地即時規定，再閱讀通用技能內容。</p>
+          <p class="resource-filter-label">依主題</p>
+          <div class="resource-filter" role="group" aria-label="自主學習資源主題篩選">
+            <button type="button" class="is-active" data-resource-topic="all">全部主題</button>
+            <button type="button" data-resource-topic="野外求生">野外求生</button>
+            <button type="button" data-resource-topic="安全生火">安全生火</button>
+            <button type="button" data-resource-topic="指南針與辨位">指南針與辨位</button>
+          </div>
+          <p class="resource-filter-label">依形式</p>
+          <div class="resource-filter" role="group" aria-label="自主學習資源形式篩選">
+            <button type="button" class="is-active" data-resource-format="all">全部形式</button>
+            <button type="button" data-resource-format="影音">影音</button>
+            <button type="button" data-resource-format="文章">網站、文章與講義</button>
           </div>
           <div class="resource-list resource-list-expanded" id="fire-resource-list" aria-live="polite"></div>
         </div>
@@ -644,13 +790,13 @@
     <section class="section challenge" id="challenge" aria-labelledby="challenge-title">
       <div class="wrap">
         <div class="section-head">
-          <div><p class="section-number">10 · FIRE CHALLENGE</p><h2 id="challenge-title">野外求生生火大考驗</h2></div>
-          <p>20 題情境闖關，考的是安全判斷、原理與責任，不是誰能把火點得最快。</p>
+          <div><p class="section-number">10 · SURVIVAL CHALLENGE</p><h2 id="challenge-title">野外求生安全大考驗</h2></div>
+          <p>30 題情境闖關：20 題安全生火，加上 10 題指南針與辨位術；考的是判斷、交叉確認與責任。</p>
         </div>
         <div class="challenge-shell">
           <div class="challenge-progress" aria-label="闖關進度">
-            <span id="quiz-progress-text">第 1／20 題</span>
-            <progress id="quiz-progress" max="20" value="1">1／20</progress>
+            <span id="quiz-progress-text">第 1／30 題</span>
+            <progress id="quiz-progress" max="30" value="1">1／30</progress>
             <span id="quiz-score">目前 0 分</span>
           </div>
           <div id="quiz-card" class="quiz-card" aria-live="polite"></div>
@@ -673,9 +819,10 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div><strong>野外求生安全手冊</strong><p>準備充分 · 尊重自然 · 平安回家</p></div>
-      <p>原手冊內容查核：2026-07-28<br>生火擴充查核：2026-08-01<br>全站圖片由 Image 2.0 生成</p>
+      <p>原手冊內容查核：2026-07-28<br>生火、指南針與辨位術擴充查核：2026-08-01<br>全站圖片由 Image 2.0 生成</p>
     </div>
   </footer>
   <script src="js/fire-learning.js" defer></script>
+  <script src="js/navigation-learning.js" defer></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-# Image 2.0 生火教材圖像提示詞
+# Image 2.0 生火、指南針與辨位術教材圖像提示詞
 
 生成日期：2026-08-01  
 生成方式：Codex 內建 Image 2.0  
@@ -132,3 +132,76 @@ Use case: scientific-educational. Asset type: challenge-completion artwork. Crea
 - 所有真人用火示範均由成人操作，並在圖中配置水桶、金屬托盤、鏟子或安全界線。
 - `hazard-campsite.png` 唯一刻意呈現錯誤行為，且只用於點擊找錯題；錯誤原因與改善方式由網頁即時顯示。
 - 圖像只能協助理解，不能取代法規查核、成人監督、戶外技能訓練或消防指示。
+
+---
+
+# 指南針與辨位術新增圖像
+
+以下 10 張新增圖像延續相同規範：適合國小高年級至國中生的教學寫實數位插畫、臺灣森林戶外環境、自然比例與準確材質、森林綠與天空藍為主、沒有圖片內文字或標記。自製指南針只呈現為成人監督的科學實驗，不描繪學生獨自在野外依賴自製設備。
+
+## 21. `diy-compass-materials.png`｜自製指南針材料
+
+```text
+Use case: scientific-educational. Asset type: classroom materials overview for a website lesson. Create a top-down teaching-realistic digital illustration of a safe DIY floating compass experiment arranged on a clean wooden science table beside a window overlooking a Taiwan forest: one shallow unbreakable bowl of still water, one small natural cork disk, one steel sewing needle secured inside a transparent lidded adult-only tray, one simple bar magnet, a folded paper towel, and one professional baseplate compass for comparison. An adult educator's gloved hand controls the needle tray while two older elementary students observe from the opposite side with hands away from sharp objects. Wide 3:2 composition, clear separation between every material, natural light, forest green, earth brown and sky blue palette. No flame, text, letters, numbers, arrows, labels, logos, signatures, watermark, glass container, loose unattended needle, unsafe handling or magnetic object near a medical device.
+```
+
+## 22. `diy-compass-steps.png`｜磁化、漂浮、靜置與比對
+
+```text
+Use case: scientific-educational. Asset type: four-stage procedure illustration without labels. Create one wide 3:2 teaching-realistic digital illustration divided by natural spacing into four left-to-right visual stages: an adult hand strokes a magnet along a steel needle in one consistent direction; the adult uses pliers to place the needle securely across a cork disk above a shallow water bowl; the cork and needle float freely in calm water without touching the rim; the final floating needle is compared from a safe distance with a professional baseplate compass. Taiwan school outdoor-education table under a covered shelter, two students only observing, accurate scale and materials, generous margins for HTML step labels. No embedded text, numbers, arrows, logos, watermark, loose needle, student handling the needle or claim of survival-grade accuracy.
+```
+
+## 23. `compass-interference.png`｜指南針干擾比較
+
+```text
+Use case: scientific-educational. Asset type: compass interference comparison illustration. Make a wide 3:2 split teaching scene on an outdoor education table in a Taiwan forest shelter. Left side: a professional baseplate compass alone on a clear wooden surface, needle calm and centered. Right side: the same type of compass placed close to a smartphone, magnetic bag clasp and steel water bottle, with the needle visibly deflected. An adult educator supervises from behind while students keep a safe observation distance. Accurate natural materials and lighting, clear visual contrast, forest green, earth brown and sky blue. No text, letters, numbers, arrows, logos, signatures, watermark, dramatic effects or implication that a phone compass is always wrong.
+```
+
+## 24. `magnetic-field-compass.png`｜地磁與磁針原理
+
+```text
+Use case: scientific-educational. Asset type: wide website lesson image. Create a strictly horizontal landscape canvas with a 3:2 aspect ratio, width clearly greater than height. A softly rendered Earth occupies the left half of a dark blue scientific backdrop, surrounded by subtle continuous curved magnetic field bands. A transparent baseplate compass occupies the right half, fully visible with generous padding, its red and dark needle aligned generally along the north-south axis. Keep Earth and compass side by side so both remain visible in a wide website crop. Teaching-realistic style for Taiwanese older elementary and middle school science, accurate proportions, restrained glow. The image must contain only Earth, magnetic field bands, compass and clean background. Absolutely no boxes, panels, leader lines, callout shapes, embedded text, letters, arrows, labels, icons, logos, watermark or fantasy energy beams.
+```
+
+## 25. `orient-map-compass.png`｜紙圖與指北針定向
+
+```text
+Use case: scientific-educational. Asset type: map-orientation field lesson. Show an adult outdoor educator and two students stopped at a wide, safe Taiwan forest viewpoint. On a stable field board is a realistic paper topographic map with contour patterns but no readable text, a transparent baseplate compass aligned along the map edge, and a pencil marking a route. In the background, a ridge, saddle, stream valley and road bend visibly correspond to shapes on the map. The adult points between the map and two terrain features while students compare, staying well away from cliffs. Wide 3:2, detailed teaching-realistic digital illustration, forest green, earth brown and sky blue. No embedded labels, letters, numbers, arrows, logos, watermark, dangerous edge, lone child or phone-only navigation.
+```
+
+## 26. `terrain-landmarks.png`｜地形地標交叉確認
+
+```text
+Use case: scientific-educational. Asset type: terrain-association lesson illustration. From a safe overlook in Taiwan's mid-elevation forest, show an adult-led student group comparing a paper topographic map and professional compass with multiple visible landscape clues: one distinct ridge, one saddle, a branching valley, a curved forest road and a small legal shelter roof. The composition should make matching pairs visually understandable through placement alone, while leaving room for HTML overlays. Everyone stands on an established trail behind a sturdy safety boundary. Wide 3:2, accurate terrain and natural lighting, rich but calm teaching realism. No text, arrows, labels, logos, watermark, cliff exposure or leaving the trail.
+```
+
+## 27. `sun-shadow.png`｜日影變化觀察
+
+```text
+Use case: scientific-educational. Asset type: sun-and-shadow observation lesson. Create a wide 3:2 teaching-realistic scene in a flat fenced schoolyard beside a Taiwan forest education center. An adult teacher supervises two students observing the changing shadow of one short upright wooden stick placed in a weighted sand tray; several small removable stones mark earlier shadow-tip positions in a gentle curve. The students wear hats and never look directly at the sun. Show soft late-morning sunlight and generous empty space for HTML explanation. No fire, sharp stake, embedded text, letters, numbers, arrows, clock, logos, watermark or claim that one shadow gives exact navigation.
+```
+
+## 28. `north-star.png`｜北極星輔助辨向
+
+```text
+Use case: scientific-educational. Asset type: night-sky navigation concept illustration. Show a safe open viewing deck at a Taiwan forest education center on a clear night. An adult astronomy educator and two students stand behind a railing with red-filtered flashlights pointed down, observing a realistic northern sky where the Big Dipper region and a moderately bright North Star are visually recognizable through natural star placement but without drawn lines or labels. Paper star chart and professional compass rest on a table as cross-check tools. Wide 3:2, deep sky blue, forest green and warm low light, calm teaching realism. No text, arrows, constellation lines, logos, watermark, cliff, wandering in darkness or exaggerated giant stars.
+```
+
+## 29. `lost-stop-navigation.png`｜迷途時停止與通報
+
+```text
+Use case: scientific-educational. Asset type: lost-person safety decision illustration. In a Taiwan mountain forest during light fog, show an adult leader and two students safely stopped together on a wide established trail under a simple rain tarp. They are not walking. The adult compares a paper map, professional baseplate compass and GPS coordinates on a phone while one student records the last known landmark and the other prepares warm layers and a whistle. Bright rain covers, a charged power bank and a visible trail marker shape without readable text improve search visibility. Wide 3:2, detailed teaching realism, calm problem-solving mood. No embedded text, arrows, logos, watermark, panic, splitting the group, cliff climbing, stream descent or lone child.
+```
+
+## 30. `navigation-badge.png`｜30 題闖關完成圖
+
+```text
+Use case: scientific-educational. Asset type: website challenge-completion artwork. Create an original wide 3:2 educational achievement scene centered on a sturdy forest-green safety shield. Arrange a transparent baseplate compass and folded topographic map as the main motifs, with a small legal controlled campfire inside a metal ring and a full water bucket as secondary motifs, backed by layered Taiwan mountain silhouettes and a subtle sky-blue and warm amber glow. Balanced polished teaching realism, generous margins, no people and no hazardous action. No text, letters, numbers, arrows, logos, signatures or watermark.
+```
+
+## 指南針圖像檢視要點
+
+- 自製指南針場景須由成人管理尖針與磁鐵，學生只觀察和記錄。
+- 自製設備不得呈現為正式野外導航工具；正式紙圖、底板指北針或 GPS 必須作為比對與備援。
+- 自然線索圖不得暗示太陽、星空或植物能單獨提供精密位置。
+- 所有戶外人物須停在既有步道、觀景平台或安全教學場域，不靠近崖邊、不分散行動。

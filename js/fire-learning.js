@@ -330,20 +330,34 @@
     if (!list) return;
     try {
       const resources = await loadJson('data/resources.json');
-      const render = (filter = 'all') => {
-        const filtered = resources.filter((resource) => filter === 'all' || (filter === '官方影音' ? resource.type.includes('影音') : !resource.type.includes('影音')));
+      let topic = 'all';
+      let format = 'all';
+      const render = () => {
+        const filtered = resources.filter((resource) => {
+          const resourceTopic = resource.topic || '安全生火';
+          const topicMatch = topic === 'all' || resourceTopic === topic;
+          const isVideo = resource.type.includes('影音') || resource.type.includes('影片');
+          const formatMatch = format === 'all' || (format === '影音' ? isVideo : !isVideo);
+          return topicMatch && formatMatch;
+        });
         list.innerHTML = filtered.map((resource) => `
           <a href="${escapeHtml(resource.url)}" target="_blank" rel="noopener noreferrer">
-            <span>${escapeHtml(resource.type)} · ${escapeHtml(resource.language)}</span>
+            <span>${escapeHtml(resource.topic || '安全生火')} · ${escapeHtml(resource.type)} · ${escapeHtml(resource.language)}</span>
             <strong>${escapeHtml(resource.title)}</strong>
             <p>${escapeHtml(resource.summary)}</p>
             <small>${escapeHtml(resource.publisher)}｜${escapeHtml(resource.duration)}｜查核 ${escapeHtml(resource.checkedAt)}${resource.adult ? '｜建議成人陪同' : ''}</small>
             <b aria-hidden="true">↗</b>
-          </a>`).join('');
+          </a>`).join('') || '<p class="empty-state">目前沒有符合這組分類的資源，請調整篩選條件。</p>';
       };
-      $$('[data-resource-filter]').forEach((button) => button.addEventListener('click', () => {
-        $$('[data-resource-filter]').forEach((item) => item.classList.toggle('is-active', item === button));
-        render(button.dataset.resourceFilter);
+      $$('[data-resource-topic]').forEach((button) => button.addEventListener('click', () => {
+        topic = button.dataset.resourceTopic;
+        $$('[data-resource-topic]').forEach((item) => item.classList.toggle('is-active', item === button));
+        render();
+      }));
+      $$('[data-resource-format]').forEach((button) => button.addEventListener('click', () => {
+        format = button.dataset.resourceFormat;
+        $$('[data-resource-format]').forEach((item) => item.classList.toggle('is-active', item === button));
+        render();
       }));
       render();
     } catch (error) {
@@ -357,7 +371,7 @@
     if (!card) return;
     try {
       const quiz = await loadJson('data/quiz.json');
-      const storageKey = 'wild_survive_fire_quiz_v1';
+      const storageKey = 'wild_survive_safety_quiz_v2';
       let saved = null;
       try { saved = JSON.parse(localStorage.getItem(storageKey)); } catch { saved = null; }
       let index = Number.isInteger(saved?.index) && saved.index >= 0 && saved.index < quiz.length ? saved.index : 0;
@@ -377,7 +391,7 @@
         $('#quiz-progress').value = index + 1;
         $('#quiz-score').textContent = `目前 ${score} 分`;
         card.innerHTML = `
-          <p class="quiz-number">QUESTION ${String(index + 1).padStart(2, '0')}</p>
+          <p class="quiz-number">QUESTION ${String(index + 1).padStart(2, '0')}<span class="quiz-topic">${escapeHtml(item.category || '安全生火')}</span></p>
           <h3>${escapeHtml(item.question)}</h3>
           <div class="quiz-options" role="group" aria-label="題目選項">
             ${item.options.map((option, optionIndex) => `<button type="button" data-option="${optionIndex}"><span>${String.fromCharCode(65 + optionIndex)}</span>${escapeHtml(option)}</button>`).join('')}
@@ -403,10 +417,10 @@
 
       const showResult = () => {
         const percent = Math.round((score / (quiz.length * 5)) * 100);
-        let suggestion = '建議回看燃燒三要素、強風決策與完全滅火流程。';
-        if (percent >= 90) suggestion = '你已能把安全、法規與環境判斷放在技巧之前。';
-        else if (percent >= 70) suggestion = '觀念已很穩固，再複習幾個環境情境就更完整。';
-        card.innerHTML = `<div class="quiz-result"><img src="assets/images/fire/challenge-badge.png" alt="安全盾牌、森林與小型受控營火構成的學習成就圖" width="1536" height="1024"><p class="quiz-number">CHALLENGE COMPLETE</p><h3>${score}／${quiz.length * 5} 分</h3><p>${escapeHtml(suggestion)}</p><p>完成闖關不代表取得自行生火許可；真火仍只限合法場地與成人全程監督。</p></div>`;
+        let suggestion = '建議回看燃燒三要素、完全滅火、指南針干擾與迷途決策。';
+        if (percent >= 90) suggestion = '你已能把安全、交叉確認與環境判斷放在技巧之前。';
+        else if (percent >= 70) suggestion = '觀念已很穩固，再複習生火與辨位的限制條件就更完整。';
+        card.innerHTML = `<div class="quiz-result"><img src="assets/images/navigation/navigation-badge.png" alt="指南針、地圖、安全盾牌與小型受控營火構成的野外安全學習成就圖" width="1536" height="1024"><p class="quiz-number">CHALLENGE COMPLETE</p><h3>${score}／${quiz.length * 5} 分</h3><p>${escapeHtml(suggestion)}</p><p>完成闖關不代表取得自行生火或獨自進入野外的許可；實地活動仍須由合格成人帶領。</p></div>`;
         next.hidden = true;
         restart.hidden = false;
       };

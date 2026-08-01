@@ -49,6 +49,22 @@
 13. [Smokey Bear：Campfire Safety](https://smokeybear.com/campfire-safety) — 澆水、攪拌、再澆水與確認冷卻，並包含安全影音。
 14. [U.S. National Weather Service：Outdoor Activities — Wildfire Safety](https://www.weather.gov/rnk/outdoorswildfire) — 火災天氣、營火預防與撤離準備。
 
+## 2026-08-01 新增：自製指南針與辨位術資源
+
+本次保留既有章節與安全生火教材，只在導航章加入指南針／辨位互動，並擴充分類式自主學習與 30 題闖關。下列頁面均於 2026-08-01 實際查核可開啟。
+
+1. [台灣山林悠遊網：地圖判讀與目標定位](https://recreation.forest.gov.tw/Files/RT/Doc/%E5%9C%B0%E5%9C%96%E5%88%A4%E8%AE%80%E8%88%87%E7%9B%AE%E6%A8%99%E5%AE%9A%E4%BD%8D.pdf) — 選圖、路線分析、指北針與地標持續定位。
+2. [東眼山自然教育中心：森林趴趴走](https://recreation.forest.gov.tw/Education/Course?id=DYS-SP1005) — 適合國小五至六年級團體的地圖、指北針與定向任務。
+3. [國科會臺灣科普環島列車：自製羅盤](https://web.nstc.gov.tw/pstrain/2022/Home/stationVideoDetail3ceb.html?id=132&station=jijiStation) — 地磁、磁化鋼針、浮材與成人陪同要求。
+4. [陽明山國家公園：登山安全與急救](https://www.ymsnp.gov.tw/ch/titlelist/mountaineering-precautions/19) — 地圖、指北針、行程通報及迷途處置。
+5. [玉山國家公園：登山裝備](https://www.ysnp.gov.tw/StaticPage/Equipment) — 地圖、指北針、GPS、行動電源與通訊備援。
+6. [U.S. National Park Service：Ten Essentials](https://www.nps.gov/articles/10essentials.htm) — 把地圖、指北針與 GPS 視為導航系統，手機不能取代必需裝備。
+7. [U.S. National Park Service：Maps and Cardinal Directions Video](https://www.nps.gov/media/video/view.htm?id=088372EF-A197-4D30-AE49-6F7545D3A3A7) — 適合兒童的北、東、南、西與地圖北箭頭影片。
+8. [U.S. Geological Survey：How To Use a Compass with a USGS Topographic Map](https://www.usgs.gov/educational-resources/how-use-a-compass-a-usgs-topographic-map) — 地圖定向、行進方位與磁偏角。
+9. [NOAA NCEI：Magnetic Declination](https://www.ngdc.noaa.gov/geomag/declination.shtml) — 磁北與真北差異，以及隨地點與時間改變的磁偏角。
+10. [National High Magnetic Field Laboratory：Make a Compass Activity](https://maglabweb.magnet.fsu.edu/magnet-academy/try-this-at-home/make-a-compass-activity/) — 磁化鋼針、降低摩擦與浮水指南針原理。
+11. [U.S. National Park Service：Compass & GPS](https://www.nps.gov/subjects/compassgps/visit.htm) — 指南針、GPS 與定向學習入口。
+
 ## 內容界線
 
 - 不提供野生植物可食清單，因錯誤辨識的代價過高。
@@ -61,4 +77,4 @@
 
 網站主視覺、六張章節圖與七張段落情境圖均由 Image 2.0 生成，提示詞要求臺灣山林生態、正確安全行為、無文字、無標誌、無浮水印。圖片是教學情境插畫，不應用來鑑定植物、動物或醫療症狀；詳細生成範圍與安全修訂見 `docs/image-generation.md`。
 
-2026-08-01 另以 Image 2.0 逐張生成 20 張「生火」教材圖像，完整提示詞、替代文字原則與安全檢視紀錄見 `docs/image-prompts.md`。原網站既有圖片未被替換。
+2026-08-01 另以 Image 2.0 逐張生成 20 張「生火」及 10 張「指南針與辨位術」教材圖像，完整提示詞、替代文字原則與安全檢視紀錄見 `docs/image-prompts.md`。原網站既有圖片未被替換。
