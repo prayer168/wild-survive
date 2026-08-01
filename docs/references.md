@@ -30,6 +30,25 @@
 6. [American Red Cross：Hypothermia](https://www.redcross.org/take-a-class/resources/learn-first-aid/hypothermia) — 失溫徵象、逐步回暖與保暖層次。
 7. [AdventureSmart Canada](https://www.adventuresmart.ca/) — Trip Plan、Survive Outside 與搜救安全教育。
 
+## 2026-08-01 新增：野外求生與安全生火資源
+
+本次只擴充原網站的「生火」元素、20 題闖關與自主學習區；其他章節內容未改寫。下列頁面均於 2026-08-01 實際查核可開啟，網站只提供重新撰寫的教育摘要與外部連結。
+
+1. [林業及自然保育署：森林火災好發期，謹記三要四不](https://www.forest.gov.tw/news/0073358) — 臺灣乾季林火風險、熄滅灰燼、帶走垃圾與關注風險。
+2. [玉山國家公園：登山活動須知](https://www.ysnp.gov.tw/StaticPage/Attention) — 行前準備、登山倫理、不可生營火與垃圾帶下山。
+3. [臺灣國家公園主題網：登山炊事與用火規範](https://www.taiwan.nps.gov.tw/home/zh-tw/quarterly/7979/7635.html) — 裸地生火、爐具炊煮與指定場域規定。
+4. [U.S. National Park Service：Wildland Fire Facts — There Must Be All Three](https://www.nps.gov/articles/wildlandfire-facts-fuel-heat-oxygen.htm) — 適合學生理解的燃料、熱與氧氣三要素。
+5. [U.S. National Park Service：Campfires](https://www.nps.gov/articles/campfires.htm) — 查規定、選位置、控制小火與完全熄滅。
+6. [Joshua Tree National Park：Campfire Safety with Ranger Donovan](https://www.nps.gov/media/video/view.htm?id=9F750DB8-5AE1-4A43-8DBF-FBC7B36B1FD0) — 1 分 16 秒官方營火安全短片。
+7. [Scouting America：Build A Fire](https://www.scouting.org/cub-scout-activities/build-a-fire/) — 引火物、細柴、燃料柴、成人監督、備水與完全冷卻。
+8. [Scouting America：Firem'n Chit](https://www.scouting.org/awards/awards-central/firemn-chit/) — 許可、清場、看守、滅火工具與冷卻測試責任。
+9. [University of Colorado Museum of Natural History：Fire Starting](https://www.colorado.edu/cumuseum/programs/schools-and-groups/colorado-archaeology-classroom/fire-starting) — 弓鑽各部件、摩擦生熱與戶外示範警告。
+10. [Rutgers University Recreation：Fire Starting Methods](https://recreation.rutgers.edu/rec-highlights/fire-starting-methods) — 火石、火鋼、火柴與乾燥引火物的比較。
+11. [Missouri Department of Conservation：How To Start a Fire Without Matches](https://mdc.mo.gov/magazines/xplor/2023-11/how-start-fire-without-matches) — 凸透鏡聚光、材料乾燥度與安全選址。
+12. [Leave No Trace：Principle 5 — Minimize Campfire Impacts](https://lnt.org/why/7-principles/minimize-campfire-impacts/) — 爐具替代、既有火圈、小火、合法木材與完全冷卻。
+13. [Smokey Bear：Campfire Safety](https://smokeybear.com/campfire-safety) — 澆水、攪拌、再澆水與確認冷卻，並包含安全影音。
+14. [U.S. National Weather Service：Outdoor Activities — Wildfire Safety](https://www.weather.gov/rnk/outdoorswildfire) — 火災天氣、營火預防與撤離準備。
+
 ## 內容界線
 
 - 不提供野生植物可食清單，因錯誤辨識的代價過高。
@@ -41,3 +60,5 @@
 ## 圖片來源
 
 網站主視覺、六張章節圖與七張段落情境圖均由 Image 2.0 生成，提示詞要求臺灣山林生態、正確安全行為、無文字、無標誌、無浮水印。圖片是教學情境插畫，不應用來鑑定植物、動物或醫療症狀；詳細生成範圍與安全修訂見 `docs/image-generation.md`。
+
+2026-08-01 另以 Image 2.0 逐張生成 20 張「生火」教材圖像，完整提示詞、替代文字原則與安全檢視紀錄見 `docs/image-prompts.md`。原網站既有圖片未被替換。

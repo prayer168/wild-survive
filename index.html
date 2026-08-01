@@ -38,6 +38,7 @@
       <a href="#warmth">禦寒</a>
       <a href="#wildlife">動物</a>
       <a href="#learn">自主學習</a>
+      <a href="#challenge">闖關</a>
     </nav>
     <a class="emergency-link" href="#emergency">緊急處置</a>
   </header>
@@ -206,6 +207,190 @@
             </ol>
           </div>
         </div>
+      </div>
+
+      <div class="wrap fire-lab" aria-labelledby="fire-lab-title">
+        <div class="fire-lab-heading">
+          <div>
+            <p class="section-number">INTERACTIVE FIRE LAB</p>
+            <h2 id="fire-lab-title">野外求生生火大考驗</h2>
+            <p>先在數位環境理解原理、比較工具與練習安全決策。這些活動不是自行點火許可。</p>
+          </div>
+          <div class="fire-lab-warning" role="note">
+            <strong>未成年人不得自行生火</strong>
+            <span>任何真火活動都必須在合法場地，由合格成人全程監督，並備妥水與滅火工具。</span>
+          </div>
+        </div>
+
+        <div class="fire-tabs" role="tablist" aria-label="生火互動教材頁籤">
+          <button type="button" role="tab" id="fire-tab-principle" aria-controls="fire-panel-principle" aria-selected="true" tabindex="0" data-fire-tab="principle">燃燒三要素</button>
+          <button type="button" role="tab" id="fire-tab-methods" aria-controls="fire-panel-methods" aria-selected="false" tabindex="-1" data-fire-tab="methods">生火方式</button>
+          <button type="button" role="tab" id="fire-tab-weather" aria-controls="fire-panel-weather" aria-selected="false" tabindex="-1" data-fire-tab="weather">環境判斷</button>
+          <button type="button" role="tab" id="fire-tab-safety" aria-controls="fire-panel-safety" aria-selected="false" tabindex="-1" data-fire-tab="safety">用火安全</button>
+          <button type="button" role="tab" id="fire-tab-gallery" aria-controls="fire-panel-gallery" aria-selected="false" tabindex="-1" data-fire-tab="gallery">圖像探索</button>
+        </div>
+
+        <section class="fire-panel" role="tabpanel" id="fire-panel-principle" aria-labelledby="fire-tab-principle" data-fire-panel="principle">
+          <div class="principle-grid">
+            <figure class="fire-feature-image">
+              <img src="assets/images/fire/fire-triangle.png" alt="小型受控營火周圍分別留有燃料、空氣與熱源的圖解空間" width="1536" height="1024" loading="lazy">
+              <figcaption>點選三要素，再從模擬營火移除其中一項，觀察火焰如何改變。</figcaption>
+            </figure>
+            <div class="fire-triangle-card">
+              <div class="fire-triangle" aria-label="火三角互動圖">
+                <button type="button" data-element="fuel"><b>燃料</b><span>可燃物</span></button>
+                <button type="button" data-element="heat"><b>熱</b><span>達到燃點</span></button>
+                <button type="button" data-element="oxygen"><b>氧氣</b><span>支持燃燒</span></button>
+              </div>
+              <p id="triangle-feedback" class="interaction-feedback" aria-live="polite">燃料、熱與氧氣同時存在，燃燒才能持續。</p>
+            </div>
+          </div>
+
+          <div class="fire-simulator" aria-labelledby="simulator-title">
+            <div>
+              <p class="card-label">數位模擬</p>
+              <h3 id="simulator-title">移除一項，會發生什麼事？</h3>
+              <div class="simulator-scene" id="simulator-scene" aria-label="目前火焰穩定燃燒">
+                <span class="sim-glow" aria-hidden="true"></span>
+                <span class="sim-flame sim-flame-one" aria-hidden="true"></span>
+                <span class="sim-flame sim-flame-two" aria-hidden="true"></span>
+                <span class="sim-log sim-log-one" aria-hidden="true"></span>
+                <span class="sim-log sim-log-two" aria-hidden="true"></span>
+                <span class="sim-status">三要素齊全</span>
+              </div>
+            </div>
+            <div class="simulator-controls">
+              <div class="simulator-actions" role="group" aria-label="移除燃燒要素">
+                <button type="button" data-remove="fuel">移除燃料</button>
+                <button type="button" data-remove="oxygen">減少氧氣</button>
+                <button type="button" data-remove="heat">降低溫度</button>
+              </div>
+              <p id="simulator-feedback" class="interaction-feedback" aria-live="polite">請先預測，再選擇要移除的要素。</p>
+              <fieldset class="prediction-box">
+                <legend>火為什麼會熄滅？</legend>
+                <label><input type="radio" name="fire-prediction" value="correct"> 因為燃燒三要素缺一不可</label>
+                <label><input type="radio" name="fire-prediction" value="wrong"> 因為火焰自己累了</label>
+              </fieldset>
+              <div class="control-row">
+                <button type="button" id="sim-play">播放</button>
+                <button type="button" id="sim-pause">暫停</button>
+                <button type="button" id="sim-reset">重設</button>
+                <button type="button" id="sim-motion" aria-pressed="false">降低動畫</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="fire-panel" role="tabpanel" id="fire-panel-methods" aria-labelledby="fire-tab-methods" data-fire-panel="methods" hidden>
+          <div class="panel-intro">
+            <div><p class="card-label">15 種方法與材料</p><h3>可靠不等於適合學生操作</h3></div>
+            <p>摩擦取火受木材、乾燥度、技巧、體力、濕度與風力影響，絕不是「快速且保證成功」。</p>
+          </div>
+          <div class="method-toolbar">
+            <label>分類篩選
+              <select id="method-category"><option value="all">全部</option></select>
+            </label>
+            <label>排序
+              <select id="method-sort">
+                <option value="name">名稱</option>
+                <option value="safety">安全性較高</option>
+                <option value="difficulty">難度較低</option>
+                <option value="reliability">可靠度較高</option>
+              </select>
+            </label>
+          </div>
+          <div id="method-grid" class="method-grid" aria-live="polite"></div>
+
+          <div class="fuel-sort" aria-labelledby="fuel-sort-title">
+            <figure>
+              <img src="assets/images/fire/fuel-levels.png" alt="引火物、鉛筆粗細的細柴與較粗燃料柴分成三組排列" width="1536" height="1024" loading="lazy">
+              <figcaption>先觀察材料大小，再拖曳或依序點選卡片。</figcaption>
+            </figure>
+            <div>
+              <p class="card-label">拖曳排序</p>
+              <h3 id="fuel-sort-title">把燃料由先到後排好</h3>
+              <div class="sort-pool" id="fuel-sort-pool" aria-label="待排序材料"></div>
+              <ol class="sort-target" id="fuel-sort-target" aria-label="排序結果"></ol>
+              <p id="fuel-sort-feedback" class="interaction-feedback" aria-live="polite">提示：先從最細、最容易點燃的材料開始。</p>
+              <button type="button" id="fuel-sort-reset">重新排序</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="fire-panel" role="tabpanel" id="fire-panel-weather" aria-labelledby="fire-tab-weather" data-fire-panel="weather" hidden>
+          <div class="weather-lab">
+            <figure>
+              <img src="assets/images/fire/weather-conditions.png" alt="晴天、雨天、潮濕、強風與寒冷五種戶外環境的教學情境" width="1536" height="1024" loading="lazy">
+              <figcaption>環境條件會改變材料狀態、成功可能與火災風險。</figcaption>
+            </figure>
+            <form id="weather-form">
+              <p class="card-label">情境判斷</p>
+              <h3>這個情境適合用火嗎？</h3>
+              <label>選擇環境
+                <select id="weather-select">
+                  <option value="sunny">晴天</option>
+                  <option value="rain">下雨</option>
+                  <option value="damp">潮濕</option>
+                  <option value="wind">強風</option>
+                  <option value="cold">寒冷</option>
+                </select>
+              </label>
+              <label>選擇材料
+                <select id="material-select">
+                  <option value="dry-grass">乾草</option>
+                  <option value="wet-twig">濕樹枝</option>
+                  <option value="bark">乾燥樹皮纖維</option>
+                  <option value="feather">羽毛棒</option>
+                  <option value="ferro">火鋼棒＋乾燥引火物</option>
+                </select>
+              </label>
+              <label class="permission-check"><input id="permission-check" type="checkbox"> 已確認場地合法、無禁火公告，且成人與滅火設備都在場</label>
+              <button type="submit">分析情境</button>
+              <div id="weather-result" class="weather-result" aria-live="polite">尚未分析。合法性與可控制性永遠先於「能不能點著」。</div>
+            </form>
+          </div>
+          <div class="no-fire-alternative">
+            <img src="assets/images/fire/wind-no-fire.png" alt="強風環境下，成人帶領學生放棄生火，改用乾衣、睡袋、地墊與防風遮蔽保暖" width="1536" height="1024" loading="lazy">
+            <div><p class="card-label">成熟的求生決策</p><h3>不生火，也能安全保暖</h3><p>乾衣、雨具、睡袋、地墊、緊急露宿袋與防風遮蔽，往往比在惡劣環境中勉強生火更可靠。</p></div>
+          </div>
+        </section>
+
+        <section class="fire-panel" role="tabpanel" id="fire-panel-safety" aria-labelledby="fire-tab-safety" data-fire-panel="safety" hidden>
+          <div class="hazard-layout">
+            <div>
+              <p class="card-label">點擊找錯</p>
+              <h3>這個營地藏著 5 個危險</h3>
+              <div class="hazard-image" id="hazard-image">
+                <img src="assets/images/fire/hazard-campsite.png" alt="刻意安排多項用火錯誤的營地找錯題背景，答案由互動按鈕另外提供" width="1536" height="1024" loading="lazy">
+                <button type="button" style="--x:18%;--y:64%" data-hazard="tent" aria-label="檢查帳篷附近">1</button>
+                <button type="button" style="--x:62%;--y:23%" data-hazard="spark" aria-label="檢查空中火星">2</button>
+                <button type="button" style="--x:54%;--y:72%" data-hazard="grass" aria-label="檢查火堆周圍地面">3</button>
+                <button type="button" style="--x:89%;--y:73%" data-hazard="water" aria-label="檢查遠方水桶">4</button>
+                <button type="button" style="--x:73%;--y:58%" data-hazard="unattended" aria-label="檢查無人看守的火堆">5</button>
+              </div>
+              <p id="hazard-feedback" class="interaction-feedback" aria-live="polite">找到危險後，點擊圓點查看原因與改善方法。</p>
+            </div>
+            <div class="extinguish-game">
+              <figure>
+                <img src="assets/images/fire/extinguish-steps.png" alt="成人依序澆水、攪拌、再次澆水並確認灰燼完全冷卻" width="1536" height="1024" loading="lazy">
+              </figure>
+              <p class="card-label">滅火順序</p>
+              <h3>依序點選五個步驟</h3>
+              <div id="extinguish-pool" class="step-pool"></div>
+              <ol id="extinguish-order" class="step-order"></ol>
+              <p id="extinguish-feedback" class="interaction-feedback" aria-live="polite">只要還有熱氣、火星或溫度，就不能離開。</p>
+              <button type="button" id="extinguish-reset">重新挑戰</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="fire-panel" role="tabpanel" id="fire-panel-gallery" aria-labelledby="fire-tab-gallery" data-fire-panel="gallery" hidden>
+          <div class="panel-intro">
+            <div><p class="card-label">IMAGE 2.0 教學圖像</p><h3>從設備、材料到安全決策</h3></div>
+            <p>圖像只協助觀察；所有文字標籤、答案與安全說明都由網頁另外呈現。</p>
+          </div>
+          <div id="fire-gallery" class="fire-gallery"></div>
+        </section>
       </div>
     </section>
 
@@ -442,6 +627,38 @@
             <a href="https://www.redcross.org/take-a-class/first-aid" target="_blank" rel="noreferrer"><span>急救訓練</span><strong>American Red Cross First Aid</strong><p>失溫、過敏、CPR 與正式急救課程入口。</p><b aria-hidden="true">↗</b></a>
           </div>
         </div>
+
+        <div class="resource-group resource-group-fire">
+          <h3>新增｜野外求生與安全生火影音、網站及文章</h3>
+          <p class="resource-note">新增資源查核日期：2026-08-01。先查臺灣所在地規定，再閱讀通用技能內容。</p>
+          <div class="resource-filter" role="group" aria-label="新增自主學習資源篩選">
+            <button type="button" class="is-active" data-resource-filter="all">全部</button>
+            <button type="button" data-resource-filter="官方影音">影音</button>
+            <button type="button" data-resource-filter="article">網站與文章</button>
+          </div>
+          <div class="resource-list resource-list-expanded" id="fire-resource-list" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section challenge" id="challenge" aria-labelledby="challenge-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="section-number">10 · FIRE CHALLENGE</p><h2 id="challenge-title">野外求生生火大考驗</h2></div>
+          <p>20 題情境闖關，考的是安全判斷、原理與責任，不是誰能把火點得最快。</p>
+        </div>
+        <div class="challenge-shell">
+          <div class="challenge-progress" aria-label="闖關進度">
+            <span id="quiz-progress-text">第 1／20 題</span>
+            <progress id="quiz-progress" max="20" value="1">1／20</progress>
+            <span id="quiz-score">目前 0 分</span>
+          </div>
+          <div id="quiz-card" class="quiz-card" aria-live="polite"></div>
+          <div class="quiz-actions">
+            <button type="button" id="quiz-next" disabled>下一題</button>
+            <button type="button" id="quiz-restart" hidden>重新挑戰</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -456,8 +673,9 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div><strong>野外求生安全手冊</strong><p>準備充分 · 尊重自然 · 平安回家</p></div>
-      <p>內容查核：2026-07-28<br>全站圖片由 Image 2.0 生成</p>
+      <p>原手冊內容查核：2026-07-28<br>生火擴充查核：2026-08-01<br>全站圖片由 Image 2.0 生成</p>
     </div>
   </footer>
+  <script src="js/fire-learning.js" defer></script>
 </body>
 </html>
